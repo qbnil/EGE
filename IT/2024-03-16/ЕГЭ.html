@@ -1,0 +1,1402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"><title>&#1045;&#1043;&#1069;</title>
+<style type="text/css">
+    body {color: #000000; font-size: 10pt; font-family: &quot;SansSerif&quot;, sans-serif; }
+li { list-style: none;  margin: 0; }
+p { margin: 0; }
+
+span.l { color: red; font-weight: bold; }
+
+a.mapnode:link,
+a.mapnode:visited,
+a.mapnode:active,
+a.mapnode:hover {
+    text-decoration: none; color: black;
+}
+a.mapnode:hover { background: #eeeee0; }
+
+</style>
+</head>
+<body>
+<p><span style="font-size: 18pt; ">ЕГЭ</span><ul>
+<li><span style="color: #0033ff; font-size: 16pt; ">Задания</span><ul>
+<li><span style="color: #00b439; font-size: 14pt; ">1. Соотнесение таблицы и графа</span><ul>
+<li>Что нужно найти<ul>
+<li>Длину ребра</li><li>Сумму длин рёбер</li><li>Некоторые вершины</li><li>Длину кратчайшего пути</li></ul>
+</li><li>Как решать<ul>
+<li>1. Вершины с уникальным числом соседей</li><li>2. Вершины, связанные с уже найденными</li><li>3. Формулируем более сложные критерии, справедливые только для одной вершины</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">2. Таблица истинности</span><ul>
+<li>Как решать<ul>
+<li>Аналитически<ul>
+<li>1. Используем свойства И/ИЛИ (все ИСТИНА / все ЛОЖЬ)</li><li>2. Раскладываем на систему простых уравнений</li><li>3. Определяем переменные столбцов из всех нулей и всех единиц</li><li>4. Перебираем варианты расположения остальных переменных</li><li>5. Соблюдаем и используем уникальность строк (и столбцов)</li></ul>
+</li><li>Программой<ul>
+<li>1. Пишем программу на перебор всех вариантов и вывод строк по условию
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for w in 0, 1: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;for x in 0, 1: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for y in 0, 1: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for z in 0, 1: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;if условие: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(w, x, y, z)</span>
+    </p>
+  <ul>
+<li>Импликация: <=</li><li>Эквиваленция: ==</li><li>Искл. "или": !=, ^</li><li>На ложное условие: not (условие)</li></ul>
+</li><li>2. Основываемся на уникальных строках и столбцах</li><li>3. Пытаемся определить лишние сроки (если есть), порядок строк может быть любым</li><li>4. Меняем порядок переменных в выводе, пока не совпадёт порядок значений во всех строках</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">3. Базы данных</span><ul>
+<li>Применяем фильтры</li><li>Не уверены - переделываем с начала</li><li>Соблюдаем единицы измерения</li><li>Контролируем даты</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">4. Кодирование и декодирование</span><ul>
+<li>Виды заданий<ul>
+<li>Префиксное кодирование<ul>
+<li>Найти код буквы</li><li>Найти суммарную длину кодов</li><li>Найти минимальную длину кода слова</li></ul>
+</li></ul>
+</li><li>Как решать<ul>
+<li>Есть известные коды<ul>
+<li>1. Строим дерево кодов</li><li>2. Вносим известные коды</li><li>3. Вносим неизвестные коды<ul>
+<li>Если не учитываем частоту букв, то делаем дерево сбалансированным (разветвляем самую короткую ветку)</li><li>Если учитываем частоту букв, то рассматриваем не менее 2 вариантов<ul>
+<li>1) самая короткая ветка - самая частая буква</li><li>2) самая короткая ветка разветвляется на две</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">5. Исполнитель с цифрами</span><ul>
+<li>nСС<ul>
+<li>Как решать<ul>
+<li>Программа перебора
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for n in range(1, 1000): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = bin(n)[2:] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;ПРЕОБРАЗОВАНИЯ СТРОКИ s </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;r = int(n, 2) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if УСЛОВИЕ НА n ИЛИ r: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, r)</span>
+    </p>
+  </li><li>Для систем счисления с основанием не 2, 8, 16 пишем функцию преобразования
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">def t(n): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = '' </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;while n &gt; 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;s = hex(n % 3)[2:] + s </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;n //= 3 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;return s</span>
+    </p>
+  </li><li>Для замены цифр используем срезы с добавлением цифр</li><li>Проверяем корректность срезов и индексов на строках типа 'abcdefgh'</li><li>У небольших значений N может не быть нужного числа бит, начинаем перебор с достаточного числа</li><li>Для наименьшего числа N ставим break, для наибольшего - смотрим последнее выведенное</li><li>Иногда R не всегда возрастает от N<ul>
+<li>Изучаем вывод всех подходящих N и R</li><li>Используем помещение в список для отыскания max/min потом</li></ul>
+</li><li>Контролируем, чтО требуется вывести</li><li>Контролируем правильность битов чётности (относительно каких бит)</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">6. Анализ результата работы исполнителя</span><ul>
+<li>Черепаха<ul>
+<li>Как решать<ul>
+<li>Есть непрямые углы - программой
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">from turtle import * </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">tracer(0) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">m = 20 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">left(90) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Программа Черепахи </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for _ in range(4): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;forward(11 * m) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;right(45) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;forward(12 * m) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;right(135) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Постановка точек </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">up() </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for x in range(0, 20): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;for y in range(0, 20): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;goto(x * m, y * m) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;dot(5) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">update() </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">Screen().exitonclick()</span>
+    </p>
+  </li><li>Только прямые углы - чертежом</li></ul>
+</li><li>Что нужно найти<ul>
+<li>Количество<ul>
+<li>Площадь<ul>
+<li>a*b</li></ul>
+</li><li>Периметр<ul>
+<li>(a+b)*2</li></ul>
+</li><li>Количество точек с границами<ul>
+<li>(a+1)*(b+1)</li></ul>
+</li><li>Количество точек без границ<ul>
+<li>(a-1)*(b-1)</li></ul>
+</li></ul>
+</li><li>Область<ul>
+<li>Пересечение<ul>
+<li>N(A и B)</li></ul>
+</li><li>Объединение<ul>
+<li>N(A или B) = N(A) + N(B) - N(A и B)</li></ul>
+</li><li>Разность<ul>
+<li>N(A и не B) = N(A) - N(A и B)</li></ul>
+</li><li>Симметрическая разность<ul>
+<li>N(A xor B) = N(A) + N(B) - 2*N(A и B)</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">7. Кодирование графики, звука</span><ul>
+<li>Графика<ul>
+<li>I_бит = Р_г * Р_в * b_бит, Цвета = 2^гл</li><li>Определить информационный объём изображения</li><li>Определить макс. число цветов<ul>
+<li>Виды заданий<ul>
+<li>Нет доп. условий</li><li>Есть доп. биты<ul>
+<li>N доп. бит</li><li>Каждый N-й бит</li><li>После каждых N бит</li></ul>
+</li><li>Есть сжатие<ul>
+<li>Уменьшило на N%</li><li>Осталось N%</li><li>Исходный на N% больше</li><li>Уменьшило в N раз</li></ul>
+</li></ul>
+</li><li>Как решать<ul>
+<li>Составляем неравенство относительно глубины цвета, решаем</li><li>Округляем ограничение глубины цвета вниз</li><li>В ответе - число цветов</li></ul>
+</li></ul>
+</li><li>Перекодирование<ul>
+<li>Найти итоговый объём<ul>
+<li>Считаем напрямую</li></ul>
+</li><li>Найти исходный объём<ul>
+<li>Составляем уравнение или считаем наоборот</li></ul>
+</li></ul>
+</li></ul>
+</li><li>Звук<ul>
+<li>I_бит = t_с * ЧД_Гц * b_бит * k, Уровни = 2^гл</li><li>Определить информационный объём звука</li><li>Перекодирование<ul>
+<li>Найти итоговый объём<ul>
+<li>Считаем напрямую</li></ul>
+</li><li>Найти исходный объём<ul>
+<li>Составляем уравнение или считаем наоборот</li></ul>
+</li></ul>
+</li></ul>
+</li><li>Передача информации<ul>
+<li>V_бит/с = I_бит / t_с</li><li>Время передачи обратно пропорционально скорости</li><li>1 кбит/с = 1000 бит/с и т. д.</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">9. Табличный процессор</span><ul>
+<li>Варианты решения<ul>
+<li>Мало вариантов расположения<ul>
+<li>Перебор вариантов расположения</li></ul>
+</li><li>Наибольшее, наименьшее, помогло бы упорядочение<ul>
+<li>Столбцы с НАИМЕНЬШИЙ/НАИБОЛЬШИЙ
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">Формулы: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">=НАИБОЛЬШИЙ(A1:F1; 6) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">=НАИБОЛЬШИЙ(A1:F1; 5) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">=НАИБОЛЬШИЙ(A1:F1; 4) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">=НАИБОЛЬШИЙ(A1:F1; 3) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">=НАИБОЛЬШИЙ(A1:F1; 2) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">=НАИБОЛЬШИЙ(A1:F1; 1)</span>
+    </p>
+  </li></ul>
+</li><li>Варианты повторения/неповторения чисел<ul>
+<li>Отдельно повторяющиеся и уникальные (ЕСЛИ, СЧЁТЕСЛИ)
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">Формулы: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">=ЕСЛИ(СЧЁТЕСЛИ($A1:$F1; A1)=2; A1; &quot;&quot;) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">=ЕСЛИ(СЧЁТЕСЛИ($A1:$F1; B1)=2; B1; &quot;&quot;) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">=ЕСЛИ(СЧЁТЕСЛИ($A1:$F1; C1)=2; C1; &quot;&quot;) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">=ЕСЛИ(СЧЁТЕСЛИ($A1:$F1; D1)=2; D1; &quot;&quot;) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">=ЕСЛИ(СЧЁТЕСЛИ($A1:$F1; E1)=2; E1; &quot;&quot;) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">=ЕСЛИ(СЧЁТЕСЛИ($A1:$F1; F1)=2; F1; &quot;&quot;)</span>
+    </p>
+  </li><li>Количества чисел (СЧЁТЕСЛИ)</li><li>Ровно одно число - чаще всех (МОДА)</li></ul>
+</li></ul>
+</li><li>Что нужно найти<ul>
+<li>Количество строк</li><li>Номер последней строки</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">10. Поиск текста</span><ul>
+<li>Контролируем регистр</li><li>Контролируем полные или неполные слова</li><li>Контролируем область поиска</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">11. Количество информации</span><ul>
+<li>1. Определяем мощность алфавита</li><li>2. Находим число бит на 1 символ (округляем вверх)</li><li>3. Находим число бит на 1 сообщение</li><li>4. Находим число байт на 1 сообщение (округляем вверх)</li><li>5. Прибавляем доп. данные, если есть</li><li>6. Умножаем на число объектов</li><li>7. Переводим в нужные по условию единицы измерения<ul>
+<li>1 килобайт = 1024 байта и т. д.</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">12. Исполнитель с программой</span><ul>
+<li>Редактор строк<ul>
+<li>Как решать<ul>
+<li>1. Берём тестовые (небольшие) данные.</li><li>2. Сами выполняем программу на них.</li><li>3. Формулируем общий принцип изменения строки, если возможно.</li><li>4. Определяем, нужно ли писать программу.<ul>
+<li>Программа не нужна, результат вычисляется</li><li>Результат вычисляется, но подбор ответа делается программой</li><li>Сложные изменения строки - всё делается программой<ul>
+<li>найти - in</li><li>заменить - replace</li></ul>
+</li></ul>
+</li></ul>
+</li><li>Виды заданий<ul>
+<li>Строка сокращается до небольшого числа цифр</li><li>Одни группы цифр в строке меняются на другие</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">14. Системы счисления</span><ul>
+<li>Большие числа и степени<ul>
+<li>Что нужно найти<ul>
+<li>Количество некоторых цифр<ul>
+<li>Программа с подсчётом остатков
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">n = ПРИМЕР </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">k = 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">while n &gt; 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n % ОСНОВАНИЕ == ЦИФРА: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;print(n % ОСНОВАНИЕ, end='') </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;n //= ОСНОВАНИЕ </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print() </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(k)</span>
+    </p>
+  </li><li>Программа с формированием строки (основания до 16)
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">n = ПРИМЕР </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">s = '' </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">while n &gt; 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = str(n % ОСНОВАНИЕ) + s </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;n //= ОСНОВАНИЕ </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(s)</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(s.count('ЦИФРА'))</span>
+    </p>
+  </li><li>Программа со статистикой по цифрам
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">n = ПРИМЕР </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">s = [0] * ОСНОВАНИЕ </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">while n &gt; 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s[n % ОСНОВАНИЕ] += 1&#xa0;</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;n //= ОСНОВАНИЕ </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(s) </span>
+    </p>
+  </li></ul>
+</li><li>Сумму цифр<ul>
+<li>Программа с подсчётом остатков
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">n = ПРИМЕР </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">s = 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">while n &gt; 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s += n % ОСНОВАНИЕ</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;print(n % ОСНОВАНИЕ, end='') </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;n //= ОСНОВАНИЕ </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print()</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(s)</span>
+    </p>
+  </li><li>Программа с формированием строки (основания до 16)
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">n = ПРИМЕР </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">s = '' </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">while n &gt; 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = str(n % ОСНОВАНИЕ) + s </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;n //= ОСНОВАНИЕ </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(s)</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(sum([int(x) for x in s]))</span>
+    </p>
+  </li></ul>
+</li></ul>
+</li></ul>
+</li><li>Пример с неизвестной цифрой<ul>
+<li>Пишем программу перебора цифр<ul>
+<li>Цикл по числовым значениям цифры, f-строки, int (основания до 16)
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">b = 14 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for n in range(b): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;x = hex(n)[2:] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = int(f'12x34', b) + int(f'5x678', b) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if s % 17 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, s // 17)</span>
+    </p>
+  </li><li>Цикл по всем цифрам как символам, f-строки, int (основания до 36)
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for x in '0123456789abcde': </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = int(f'12x34', b) + int(f'5x678', b) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if s % 17 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(x, s // 17)</span>
+    </p>
+  </li><li>Цикл по числовым значениям цифр, разложение по степеням или по схеме Горнера
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">b = 143 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for x in range(b): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = ((((1*b+2)*b+x)*b+3)*b+4) + ((((5*b+x)*b+6)*b+7)*b+8) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if s % 17 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(x, s // 17)</span>
+    </p>
+  </li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">16. Рекурсия</span><ul>
+<li>Несложные формулы, небольшие числа</li><li>Большие числа<ul>
+<li>1. Выводим закономерность (факториал, степень и т. п.)</li><li>2. Упрощаем</li><li>3. Вычисляем</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">17. Обработка массива чисел</span><ul>
+<li>Формулировки<ul>
+<li>максимальное / минимальное<ul>
+<li>Для начальных значений можно использовать бесконечности: float('inf')</li></ul>
+</li><li>делится / не делится / даёт нужный остаток / заканчивается на какую-то цифру<ul>
+<li>a[i] % x == 0</li><li>a[i] % x != 0</li><li>abs(a[i]) % x == y</li><li>abs(a[i]) % 10 == x</li><li>Помним про остатки отрицательных чисел</li></ul>
+</li><li>N-значное<ul>
+<li>len(str(a[i])) == 3</li><li>100 <= a[i] <= 999</li><li>a[i] in range(100, 1000)</li><li>Помним про отрицательные числа</li></ul>
+</li><li>положительное / отрицательное</li><li>больше / меньше другого элемента пары<ul>
+<li>Контролируем (не)строгость знаков</li></ul>
+</li><li>оба элемента / хотя бы один элемент / ровно один элемент пары<ul>
+<li>"ровно один" - исключающее "или": !=, ^</li><li>Помним про приоритет операций</li></ul>
+</li><li>не менее / не более N элементов в тройке<ul>
+<li>Предпочитаем счётчик длинному условию</li></ul>
+</li></ul>
+</li><li>Как решать
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">with open('file.txt') as f: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;a = [int(x) for x in f] </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">m = float('inf') </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for x in a: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if x % 7 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;m = min(m, x) </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">k = 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">ms = float('-inf') </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for i in range(len(a) - 1): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;s = a[i] + a[i + 1] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if (a[i] % 10 == 7 or a[i + 1] % 10 == 7) and s &gt; m**2: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;ms = max(ms, s) </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(k, ms)</span>
+    </p>
+  <ul>
+<li>1. Открываем файл, считываем числа в массив<ul>
+<li>Контролируем, нужно ли первое число<ul>
+<li>Удаление: del a[0]; a.pop(0); a = a[1:]; предварительное f.readline()</li></ul>
+</li></ul>
+</li><li>2. Проходом по массиву ищем нужный элемент</li><li>3. Проходом по массиву ищем нужные пары</li></ul>
+</li><li>На что ещё обратить внимание<ul>
+<li>Читаем и понимаем каждый элемент задания</li><li>В ответе должны быть два числа<ul>
+<li>Число подходящих пар</li><li>Что-нибудь ещё про ЭТИ пары</li></ul>
+</li><li>Пробуем выполнить задание на своих тестовых данных</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">18. Динамическое программирование</span><ul>
+<li>Робот и монеты<ul>
+<li>Движение из угла в угол<ul>
+<li>Есть стены</li><li>Есть углы</li></ul>
+</li><li>Как решать<ul>
+<li>1. Отмечаем поле и особенные клетки (у стен)</li><li>2. Делаем копию формата поля</li><li>3. Заполняем копию поля общей формулой</li><li>4. Меняем формулы в особенных клетках</li><li>5. Учитываем углы, если есть</li><li>6. Макс/мин - замена в формулах</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">23. Количество программ</span><ul>
+<li>Как решать<ul>
+<li>Если чисел мало, то таблицей и рекуррентной формулой</li><li>Если чисел много, то программой<ul>
+<li>Программа с "функцией" (списком)<ul>
+<li>Нет особенностей
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17 </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">f = [0] * 18 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">f[2] = 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for n in range(3, 18): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;t = f[n - 1] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n % 2 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;t += f[n // 2] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;f[n] = t </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f[17])</span>
+    </p>
+  </li><li>Нужно не проходить через число
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17, без 7 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">f = [0] * 18 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">f[2] = 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for n in range(3, 18): &#xa0;</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;t = f[n - 1] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n % 2 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;t += f[n // 2] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;f[n] = t </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n == 7: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;f[n] = 0</span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f[17])</span>
+    </p>
+  </li><li>Нужно пройти через число
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17, через 7 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">f = [0] * 18 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">f[2] = 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">for n in range(3, 18): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;t = f[n - 1] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n % 2 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;t += f[n // 2] </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;f[n] = t </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n == 7: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for p in range(n): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;f[p] = 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f[17])</span>
+    </p>
+  <ul>
+<li>Доп. способ: вычитание не проходящих из всех</li></ul>
+</li></ul>
+</li><li>Программа с настоящей рекурсивной функцией<ul>
+<li>Нет особенностей<ul>
+<li>С одним аргументом (конечное число) - не универсально, надо проверять делимость
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17 </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">def f(n): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n &lt; 2: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n == 2: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;t = f(n - 1) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if n % 2 == 0: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;t += f(n // 2) </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;return t </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f(17))</span>
+    </p>
+  </li><li>С двумя аргументами (начальное и конечное)
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17 </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">def f(a, b): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if a &gt; b: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if a == b: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;return f(a + 1, b) + f(a * 2, b) </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f(2, 17))</span>
+    </p>
+  </li></ul>
+</li><li>Нужно не проходить через число
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17, без 7 </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">def f(a, b): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if a &gt; b or a == 7: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if a == b: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;return f(a + 1, b) + f(a * 2, b) </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f(2, 17))</span>
+    </p>
+  </li><li>Нужно пройти через число
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Команды: +1, *2. </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;"># Найти число программ: 2 -&gt; 17, через 7 </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">def f(a, b): </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if a &gt; b: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 0 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;if a == b: </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return 1 </span>
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">&#xa0;&#xa0;&#xa0;&#xa0;return f(a + 1, b) + f(a * 2, b) </span>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <span style="font-family: Noto Mono; font-size: 14pt;">print(f(2, 7) * f(7, 17))</span>
+    </p>
+  <ul>
+<li>Доп. способ: вычитание не проходящих из всех</li></ul>
+</li></ul>
+</li></ul>
+</li><li>Если есть только сложение и вычитание, то можно в табличном процессоре</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">25. Перебор чисел</span><ul>
+<li>Числа по маске<ul>
+<li>Подстановочные знаки только "?"<ul>
+<li>Перебор всех групп возможных цифр
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for a in range(10): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;for b in range(10): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for c in range(10): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;n = int(f'12{a}3{b}{c}456') </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;if n % ДЕЛИТЕЛЬ == 0: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, n // ДЕЛИТЕЛЬ)</span>
+    </p>
+  </li></ul>
+</li><li>Есть подстановочный знак "*"<ul>
+<li>Перебор чисел с сопоставлением по маске<ul>
+<li>С модулем fnmatch<ul>
+<li>Общий вид
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">import fnmatch </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for n in range(ДЕЛИТЕЛЬ, ПРЕДЕЛ, ДЕЛИТЕЛЬ): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if fnmatch.fnmatch(str(n), 'МАСКА'): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, n // ДЕЛИТЕЛЬ)</span>
+    </p>
+  </li><li>Пример
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">import fnmatch </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for n in range(189, 10**9, 189): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if fnmatch.fnmatch(str(n), '24*7*45?8'): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, n // 189)</span>
+    </p>
+  </li></ul>
+</li><li>С модулем re (немного быстрее, но сложнее)<ul>
+<li>Изменения в маске<ul>
+<li>? -> .</li><li>* -> .*</li><li>^ в начале</li><li>$ в конце</li></ul>
+</li><li>Общий вид
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">import re </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">expr = re.compile('РЕГУЛЯРНОЕ ВЫРАЖЕНИЕ') </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for n in range(ДЕЛИТЕЛЬ, ПРЕДЕЛ, ДЕЛИТЕЛЬ): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if expr.search(str(n)): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, n // ДЕЛИТЕЛЬ)</span>
+    </p>
+  </li><li>Пример
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">import re </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">expr = re.compile('^24.*7.*45.8') </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for n in range(189, 1_000_000_000, 189): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if expr.search(str(n)): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;print(n, n // 189)</span>
+    </p>
+  </li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #00b439; font-size: 14pt; ">26. Обработка чисел с использованием сортировки</span><ul>
+<li>Эффекты сортировки<ul>
+<li>Известно, где находится много минимальных/максимальных значений</li><li>Одинаковые и близкие значения оказываются рядом</li><li>Легко осуществлять поиск значения (двоичный поиск)</li><li>Можно применять жадные алгоритмы</li></ul>
+</li><li>Что нужно уметь<ul>
+<li>Читать и понимать сюжет задания, пользоваться примером для уточнения понимания</li><li>Открывать текстовый файл в Excel/Calc (по 1 числу в ячейке)</li><li>Сортировать, правильно определяя направления и ключи сортировки и потом правильно учитывая направление</li></ul>
+</li><li>По возможности предпочитаем решение в табличном процессоре, оно нагляднее</li><li>Сюжеты<ul>
+<li>Максимальное количество элементов в сумме<ul>
+<li>С макс. величиной элемента ("Системный администратор и файлы")<ul>
+<li>Решение в табличном процессоре<ul>
+<li>1. Открываем файл, запоминаем и убираем предельную сумму игнорируем число файлов</li><li>2. Сортируем файлы пользователей по возрастанию размера.</li><li>3. Создаём столбец с накопленной суммой
+    <p>
+      Формула:
+    </p>
+    <code>=B1+A2</code>
+  </li><li>4. Ищем макс. сумму, не превышающую предел.</li><li>5. Порядковый номер последнего слагаемого - 1-е число в ответе.</li><li>6. Определяем запас по размеру файла и макс. значение элемента с его учётом.</li><li>7. Ищем макс. элемент, не превышающий это значение - 2-е число в ответе.</li></ul>
+</li><li>Решение программой
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">with open('input.txt') as f: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;# Считываем первую строку (предел суммы и кол-во файлов) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;m, n = map(int, f.readline().split()) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;a = [int(x) for x in f] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Сортируем файлы по неубыванию </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">a.sort() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Выбираем файлы по порядку, накапливая сумму </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k = 0 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">s = 0 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">while s &lt;= m: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;s += a[k] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Отходим на один файл назад, т. к. превысили предел суммы </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k -= 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">s -= a[k] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Определям запас места на диске и макс. размер реального файла </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">d = m - (s - a[k]) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">t = max([x for x in a if x &lt;= d]) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">print(k, t) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0; </span>
+    </p>
+  </li></ul>
+</li><li>С количеством неподходящих элементов ("Видеоконференция и ролики")<ul>
+<li>Решение в табличном процессоре<ul>
+<li>1. Открываем файл, запоминаем и убираем предельную сумму, игнорируем число роликов</li><li>2. Сортируем файлы пользователей по возрастанию размера.</li><li>3. Создаём столбец с накопленной суммой
+    <p>
+      Формула:
+    </p>
+    <code>=B1+A2</code>
+  </li><li>4. Ищем макс. сумму, не превышающую предел.</li><li>5. Порядковый номер последнего слагаемого - 1-е число в ответе.</li><li>6. Определяем запас по размеру файла и макс. значение элемента с его учётом.</li><li>7. Ищем количество элементов, превышающих это значение, - 2-е число в ответе.</li></ul>
+</li><li>Решение программой
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">with open('input.txt') as f: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;# Считываем первую строку (предел суммы и кол-во файлов) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;m, n = map(int, f.readline().split()) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;a = [int(x) for x in f] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Сортируем файлы по неубыванию </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">a.sort() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Выбираем файлы по порядку, накапливая сумму </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k = 0 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">s = 0 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">while s &lt;= m: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;s += a[k] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Отходим на один файл назад, т. к. превысили предел суммы </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k -= 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">s -= a[k] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Определям запас места на диске и количество неподходящих файлов </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">d = m - (s - a[k]) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">t = len([x for x in a if x &gt; d]) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">print(k, t) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0; </span>
+    </p>
+  </li></ul>
+</li></ul>
+</li><li>Максимальное подмножество с большой разницей соседних элементов ("Подарок и много коробок")<ul>
+<li>Решение в табличном процессоре<ul>
+<li>1. Открываем файл, игнорируем число коробок</li><li>2. Сортируем размеры коробок в зависимости от второго вопроса задания (для получения макс. значения начинаем с макс. значений, т. е. по убыванию)</li><li>3. Первую коробку всегда берём.</li><li>4. Создаём столбец с размером последней взятой коробки согласно разнице в размерах
+    <p>
+      Формула:
+    </p>
+    <code>=ЕСЛИ(A2-B1&gt;=РАЗНИЦА; A2; B1)</code>
+  </li><li>5. Создаём столбец с логическим значением (взяли коробку или нет) согласно изменению размера взятой коробки
+    <p>
+      Формула
+    </p>
+    <code>=B2&lt;&gt;B1 </code>
+  </li><li>6. Определяем число "истин" (СЧЁТЕСЛИ) - 1-е число в ответе</li><li>7. Размер коробки с последней "истиной" - 2-е число в ответе</li></ul>
+</li><li>Решение программой
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">with open('input.txt') as f: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;f.readline() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;a = [int(x) for x in f] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Сортируем файлы согласно выбранному порядку </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">a.sort() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Перебираем коробки </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k = 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">p = a[0] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for i in range(1, len(a)): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;# Сравниваем размеры коробок согласно выбранному порядку </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if a[i] - p &gt;= РАЗНИЦА: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;p = a[i] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">print(k, p)</span>
+    </p>
+  </li></ul>
+</li><li>Максимальное число групп элементов с небольшой разницей ("Подарки, каждый в нескольких коробках")<ul>
+<li>Решение в табличном процессоре<ul>
+<li>1. Открываем файл, игнорируем число коробок</li><li>2. Сортируем размеры коробок в зависимости от второго вопроса задания (для получения макс. значения начинаем с макс. значений, т. е. по убыванию)</li><li>3. У первой коробки всегда номер 1 в группе</li><li>4. Создаём столбец с порядковым номером коробки в группе
+    <p>
+      Формула:
+    </p>
+    <p>
+      <code>=ЕСЛИ(И(A2-A1&lt;=РАЗНИЦА; A1&lt;РАЗМЕР_ГРУППЫ; B1+1; 1)</code>
+    </p>
+  </li><li>5. Количество значений номеров коробок, равных размеру группы, - 1-е число в ответе
+    <p>
+      Формула:
+    </p>
+    <code>=СЧЁТЕСЛИ(B:B; РАЗМЕР_ГРУППЫ) </code>
+  </li><li>6. Размер коробки с последним значением размера группы - 2-е число в ответе</li></ul>
+</li><li>Решение программой
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">with open('input.txt') as f: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;f.readline() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;a = [int(x) for x in f] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Сортируем файлы согласно выбранному порядку </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">a.sort() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;"># Перебираем коробки </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k = 0 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">t = 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for i in range(1, len(a)): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;# Сравниваем размеры коробок согласно выбранному порядку </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if a[i] - a[i - 1] &lt;= РАЗНИЦА and t &lt; РАЗМЕР_ГРУППЫ: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;t += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;if t == РАЗМЕР_ГРУППЫ: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;p = a[i] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;else: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;t = 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">print(k, p)</span>
+    </p>
+  </li></ul>
+</li><li>Непересекающиеся интервалы<ul>
+<li>Самое раннее окончание последнего интервала ("Конференция и мероприятия")<ul>
+<li>Решение в табличном процессоре<ul>
+<li>.1 Открываем файл, игнорируем число мероприятий</li><li>2. Сотрируем мероприятия по возрастанию времени завершения</li><li>3. Первое мероприятие всегда посещаем</li><li>4. Создаём столбец с временем окончания последнего посещённого мероприятия
+    <p>
+      Формула для C1:
+    </p>
+    <p>
+      <code>=B1</code>
+    </p>
+    <p>
+      Формула для C2:
+    </p>
+    <code>=ЕСЛИ(A2&gt;=C1; B2; C1)</code>
+  </li><li>5. Создаём столбец с логическим значением (посетили мероприятие или нет) согласно изменению времени последнего посещённого мероприятия
+    <p>
+      Значение для D1:
+    </p>
+    <p>
+      <code>ИСТИНА</code>
+    </p>
+    <p>
+      Формула для D2 и для протягивания:
+    </p>
+    <code>=C2&lt;&gt;C1</code>
+  </li><li>6. Определяем число "истин" (СЧЁТЕСЛИ) - 1-е число в ответе</li><li>7. Время завершения мероприятия с последней "истиной" - 2-е число в ответе</li></ul>
+</li><li>Решение программой
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">with open('input.txt') as f: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;f.readline() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;a = [tuple(map(int, x.split())) for x in f] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">a.sort(key=lambda x: x[1]) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k = 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">last = a[0][1] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for i in range(1, len(a)): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if a[i][0] &gt;= last: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;last = a[i][1] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">print(k, last)</span>
+    </p>
+  </li></ul>
+</li><li>Самое позднее окончание последнего интервала ("Конференция и мероприятия")<ul>
+<li>Решение в табличном процессоре<ul>
+<li>.1 Открываем файл, игнорируем число мероприятий</li><li>2. Сотрируем мероприятия по возрастанию времени завершения</li><li>3. Первое мероприятие всегда посещаем</li><li>4. Создаём столбец с временем окончания последнего посещённого мероприятия
+    <p>
+      Формула для C1:
+    </p>
+    <p>
+      <code>=B1</code>
+    </p>
+    <p>
+      Формула для C2:
+    </p>
+    <code>=ЕСЛИ(A2&gt;=C1; B2; C1)</code>
+  </li><li>5. Создаём столбец с логическим значением (посетили мероприятие или нет) согласно изменению времени последнего посещённого мероприятия
+    <p>
+      Значение для D1:
+    </p>
+    <p>
+      <code>ИСТИНА</code>
+    </p>
+    <p>
+      Формула для D2 и для протягивания:
+    </p>
+    <code>=C2&lt;&gt;C1</code>
+  </li><li>6. Определяем число "истин" (СЧЁТЕСЛИ) - 1-е число в ответе</li><li>7. Ищем предпоследнюю "истину", узнаём время завершения этого мероприятия.</li><li>8. Ищем первую с конца строку, в которой время начала не меньше найденного времени, - 2-е число в ответе</li></ul>
+</li><li>Решение программой
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">with open('input.txt') as f: &#xa0; </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;f.readline() </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;a = [tuple(map(int, x.split())) for x in f] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">a.sort(key=lambda x: x[1]) </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">k = 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">prev = 0 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">last = a[0][1] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">for i in range(1, len(a)): </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;if a[i][0] &gt;= last: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;prev = last </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;last = a[i][1] </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;k += 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">i = len(a) - 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">while a[i][0] &lt; prev: </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">&#xa0;&#xa0;&#xa0;&#xa0;i -= 1 </span>
+    </p>
+    <p>
+      <span style="font-size: 14pt; font-family: Noto Mono;">print(k, a[i][1])</span>
+    </p>
+  </li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #0033ff; font-size: 16pt; ">Системы счисления</span><ul>
+<li>Перевод из nСС в 10СС<ul>
+<li>1. Нумеруем разряды справа налево с 0.</li><li>2. Записываем сумму разрядных слагаемых.</li><li>3. Вычисляем сумму.</li><li>A = 10 и т. д.</li><li>ИЛИ по схеме Горнера<ul>
+<li>1. Берём старшую цифру.</li><li>2. Умножаем на основание системы счисления.</li><li>3. Прибавляем следующую цифру.</li><li>4. Повторяем пп. 2-3, пока цифры не закончатся.</li></ul>
+</li></ul>
+</li><li>Перевод из 10СС в nСС<ul>
+<li>1. Делим число на основание нужной системы счисления.</li><li>2. Частное опять делим и т. д., пока не равно 0.</li><li>3. Остатки выписываем в обратном порядке.</li><li>A = 10 и т. д.</li></ul>
+</li></ul>
+</li><li><span style="color: #0033ff; font-size: 16pt; ">Табличный процессор</span><ul>
+<li>Листы, строки, столбцы, ячейки, диапазоны</li><li>Текст, числа, даты, булевы значения, формулы</li><li>Выделение, копирование, протягивание</li><li>Функции<ul>
+<li>Основные<ul>
+<li>СУММ</li><li>СРЗНАЧ</li><li>МАКС</li><li>МИН</li><li>СЧЁТ</li><li>СУММКВ</li></ul>
+</li><li>Условные<ul>
+<li>СУММЕСЛИ</li><li>СЧЁТЕСЛИ</li><li>ЕСЛИ</li></ul>
+</li><li>Логические<ul>
+<li>НЕ</li><li>И</li><li>ИЛИ</li></ul>
+</li><li>Статистика<ul>
+<li>НАИБОЛЬШИЙ</li><li>НАИМЕНЬШИЙ</li><li>МОДА</li></ul>
+</li></ul>
+</li></ul>
+</li><li><span style="color: #0033ff; font-size: 16pt; ">Python</span><ul>
+<li>среды<ul>
+<li>IDLE</li><li>PyCharm</li><li>Wing IDE</li><li>Geany</li><li>Онлайн-среды<ul>
+<li>onlinegdb.com</li></ul>
+</li></ul>
+</li><li>print<ul>
+<li>sep</li><li>end</li></ul>
+</li><li>input</li><li>типы данных<ul>
+<li>int</li><li>float</li><li>bool</li><li>str<ul>
+<li></li></ul>
+</li><li>NoneType (None)</li></ul>
+</li><li>переменные<ul>
+<li>присваивание<ul>
+<li>обычное</li><li>совмещённое</li><li>каскадное</li><li>множественное</li></ul>
+</li></ul>
+</li><li>ветвления<ul>
+<li>if, else, elif</li><li>>, <, ==, <=, >=, !=</li><li>not, and, or</li><li>множественные неравенства</li></ul>
+</li><li>циклы<ul>
+<li>while</li><li>break</li><li>continue</li><li>else</li></ul>
+</li><li>строки<ul>
+<li>задание строки: str, '', ""</li><li>проверка вхождения (in)</li><li>замена (replace)</li><li>конкатенация (+), повторение (*)</li></ul>
+</li></ul>
+</li></ul>
+</body>
+</html>
